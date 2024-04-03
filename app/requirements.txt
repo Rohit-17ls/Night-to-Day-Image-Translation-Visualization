@@ -1,0 +1,4 @@
+torch
+numpy
+PIL
+streamlit==1.1*
