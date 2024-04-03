@@ -1,5 +1,5 @@
 DualGAN -> G_BA_610.pth
 CycleGAN -> G_BA_270.pth
 DiscoGAN -> G_BA_320.pth
-Night2Day -> G_BA_120.pth
+UNITGAN -> G_BA_120.pth
 ToDayGAN -> G_BA_490.pth
