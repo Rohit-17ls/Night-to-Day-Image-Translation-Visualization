@@ -13,7 +13,7 @@ def update_selected_model():
 st.header("Night to Day Image Translation using GANs");
 
 selected_model = st.selectbox("Choose GAN model", 
-                             ("CycleGAN", "DiscoGAN", "UNITGAN"),
+                             ("CycleGAN", "DiscoGAN", "ToDayGAN", "UNITGAN"),
                              on_change = update_selected_model);
 
 GAN_model = model_store.get_model(selected_model);
@@ -26,7 +26,7 @@ uploaded_file = st.file_uploader("Pick Image", accept_multiple_files = False);
 if(uploaded_file is not None):
     image_cols = st.columns(2);
     
-    img = Image.open(uploaded_file)
+    img = Image.open(uploaded_file).convert('RGB')
     img = transforms.Resize((128, 128), Image.BICUBIC)(img)
     height, width = img.size
 

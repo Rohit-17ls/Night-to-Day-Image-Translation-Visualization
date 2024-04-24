@@ -158,7 +158,7 @@ def normalize(tensor):
 
 def translate(img, model):
     #img = transforms.functional.to_pil_image(img_tensor)
-    print(type(img))
+    print(f'\n\nLOG : {type(img)}, {img.size}\n\n')
     img_tensor = img_transforms(img)
     out = model(img_tensor.unsqueeze(0))
     out = normalize(out.squeeze())
